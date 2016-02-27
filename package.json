@@ -1,0 +1,24 @@
+{
+  "name": "rust-experimental-webrcon",
+  "version": "0.0.1",
+  "description": "Promise-based JavaScript library for Rcon connection to the server with websockets",
+  "main": "dist/rust-webrcon.js",
+  "keywords": [
+    "rust",
+    "experimental",
+    "websocket",
+    "rcon",
+    "js",
+    "library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://"
+  },
+  "author": "Maksim Nazarjev <acupofspirt@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-closure-compiler": "^0.4.0"
+  }
+}
