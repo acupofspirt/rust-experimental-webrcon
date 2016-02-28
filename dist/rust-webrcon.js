@@ -49,7 +49,7 @@ class RustWebRcon {
 				this.socket.close(1000)
 				this.socket.onclose = e => {
 					this.connected = false
-					return resolve(1)
+					resolve(this.socket)
 				}
 			}
 			else throw new Error('Connection isn\'t established yet')
