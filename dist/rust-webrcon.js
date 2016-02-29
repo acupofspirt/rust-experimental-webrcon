@@ -32,7 +32,7 @@ class RustWebRcon {
 						resolve(this.socket)
 					}
 				}
-				this.socket.onerror = (e) => reject('Error in connection establishment')
+				this.socket.onerror = () => reject('Error in connection establishment')
 			}
 			else reject('Connection already established')
 		})
@@ -47,7 +47,7 @@ class RustWebRcon {
 		return new Promise((resolve, reject) => {
 			if(this.connected && this.socket.readyState === 1){
 				this.socket.close(1000)
-				this.socket.onclose = e => {
+				this.socket.onclose = () => {
 					this.connected = false
 					resolve(this.socket)
 				}
@@ -75,7 +75,7 @@ class RustWebRcon {
 	 * @return {Function}
 	 */
 	['cmdThen'](msg, identifier=-1){
-		return (data)=> new Promise((resolve, reject) => {
+		return ()=> new Promise((resolve, reject) => {
 			this.send(msg, identifier, resolve, reject)
 		})
 	}
@@ -92,8 +92,8 @@ class RustWebRcon {
 			'Name': 'WebRcon'
 		})
 		
-		this.socket.onerror = e =>  reject('Error in connection establishment')
-		this.socket.onmessage = msg => resolve(JSON.parse(msg.data).Message)
+		this.socket.onerror = () =>  reject('Error in connection establishment')
+		this.socket.onmessage = msg => resolve(JSON.parse(msg.data))
 		this.socket.send(packet)
 	}
 }

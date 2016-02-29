@@ -14,7 +14,7 @@ var rust = new RustWebRcon('rcon_password','server_ip','rcon_port')
 rust.open()
 $('button').click(() => {
 	rust.cmd('status')
-	.then(data => { '...do some work with response object' })
+	.then(data => { '...do some work with response object' }) //see "Example of server response"
 })
 
 // Or execute commands with "then" chaining after connecting

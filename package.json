@@ -1,6 +1,6 @@
 {
   "name": "rust-experimental-webrcon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Promise-based JavaScript library for Rcon connection to the server with websockets",
   "main": "dist/rust-webrcon.js",
   "keywords": [
