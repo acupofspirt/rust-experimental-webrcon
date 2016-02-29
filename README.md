@@ -47,7 +47,7 @@ Send Rcon command
 
 Parameters
 + `string: command` - Command to execute. See [full command list](http://playrustwiki.com/wiki/Server_Commands).
-+ `number: identifier` - Your server's identity. Avoid spaces, special characters.
++ `number: identifier` - Used to link response with command. Optional.
 
 #### cmdThen(string: command, number: identifier): Function
 
@@ -56,7 +56,7 @@ Send Rcon command - method for using with promise's .then()
 
 Parameters
 + `string: command` - Command to execute. See [full command list](http://playrustwiki.com/wiki/Server_Commands).
-+ `number: identifier` - Your server's identity. Avoid spaces, special characters.
++ `number: identifier` - Used to link response with command. Optional.
 
 ## **Example of server response**
 ```JSON
