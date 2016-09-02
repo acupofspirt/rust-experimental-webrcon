@@ -10,7 +10,7 @@ You may use source file rust-webrcon.js (ES6) or minified version rust-webrcon.m
 ```js
 var rust = new RustWebRcon('rcon_password','server_ip','rcon_port')
 
-// Use it in some event hadler
+// Use it in some event handler
 rust.open()
 $('button').click(() => {
 	rust.cmd('status')
